@@ -9,4 +9,9 @@ public class HelloWorldController {
     public String HelloWorld(){
         return "Hello World";
     }
+    @GetMapping(path = "/yacine")
+    public String Yacine(){
+        return "Yacine";
+    }
 }
+
