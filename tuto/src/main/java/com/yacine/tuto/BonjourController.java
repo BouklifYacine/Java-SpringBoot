@@ -16,8 +16,6 @@ public class BonjourController {
         this.beanTest = beanTest;
     }
 
-    
-
     @GetMapping("/bonjour") 
     public String afficherBonjour() {
         return bonjourService.direBonjour() + " " + beanTest.BeanTest(); // Utilise le bean
