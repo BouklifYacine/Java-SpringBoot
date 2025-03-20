@@ -1,9 +1,20 @@
 package com.yacine.tuto;
 
+
+import org.springframework.stereotype.Service;
+
+@Service
 public class OrderService {
-   public void PlaceOrder(){
-    StripePaymentService compte = new StripePaymentService();
-    compte.processPayment(10);
-   }
+
+    private PaymentService paymentService;
+
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
+    public void PlaceOrder() {
+
+        paymentService.processPayment(10);
+    }
 
 }
