@@ -3,7 +3,7 @@ package com.yacine.tuto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-@Service("stripe")
+// @Service("stripe")
 public class StripePaymentService implements PaymentService {
     @Value("${stripe.apiurl}")
     private String apiURL;

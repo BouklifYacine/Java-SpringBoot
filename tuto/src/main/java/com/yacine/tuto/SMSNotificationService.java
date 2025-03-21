@@ -2,7 +2,7 @@ package com.yacine.tuto;
 
 import org.springframework.stereotype.Service;
 
-@Service("SMS")
+// @Service("SMS")
 public class SMSNotificationService implements NotificationService {
     @Override
     public void Send(String message){
