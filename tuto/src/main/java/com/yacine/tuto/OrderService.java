@@ -1,9 +1,5 @@
 package com.yacine.tuto;
 
-
-import org.springframework.stereotype.Service;
-
-@Service
 public class OrderService {
 
     private PaymentService paymentService;
@@ -12,9 +8,7 @@ public class OrderService {
         this.paymentService = paymentService;
     }
 
-    public void PlaceOrder() {
-
+    public void PlacerOrder() {
         paymentService.processPayment(10);
     }
-
 }
