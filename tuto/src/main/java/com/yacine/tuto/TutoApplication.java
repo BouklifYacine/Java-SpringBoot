@@ -9,8 +9,9 @@ public class TutoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(TutoApplication.class, args);
-		var OrderService = context.getBean(OrderService.class);
-		OrderService.PlaceOrder();
+		NotificationManagerService notifmanager = context.getBean(NotificationManagerService.class);
+		notifmanager.Notification("Coucou");
+
 
 	}
 
