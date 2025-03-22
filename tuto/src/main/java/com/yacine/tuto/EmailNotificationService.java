@@ -1,11 +1,9 @@
 package com.yacine.tuto;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
 
-// @Service("Email")
-// @Primary
+
+
 public class EmailNotificationService implements NotificationService {
 
     @Value("${stripe.apiurl}")

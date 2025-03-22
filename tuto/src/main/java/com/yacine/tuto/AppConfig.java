@@ -1,6 +1,5 @@
 package com.yacine.tuto;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
