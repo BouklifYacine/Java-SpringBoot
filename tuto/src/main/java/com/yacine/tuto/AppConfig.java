@@ -1,14 +1,13 @@
 package com.yacine.tuto;
 
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
 
-    @Value("${ChoixNotif}")
-    private String ChoixNotif;
+    private String tester = "salut";
 
     @Bean
     public NotificationService SMS() {
@@ -22,7 +21,7 @@ public class AppConfig {
 
     @Bean
     public NotificationManagerService notificationManagerService() {
-        if (ChoixNotif.equals("SMS")) {
+        if (tester.equals("salut")) {
             return new NotificationManagerService(SMS());
         }
         return new NotificationManagerService(Email());
