@@ -7,29 +7,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class User {
-    @Id
-    @Column(nullable = false)
+public class Tag {
+      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, name = "name")
+     @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false, name = "email")
-    private String email;
-
-    @Column(nullable = false, name = "password")
-    private String password;
-
 }
